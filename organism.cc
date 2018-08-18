@@ -131,7 +131,7 @@ Organism::Organism () {
 
     std::cout << model->isOneModel() <<std::endl;
 
-
+    std::cout << "Model created." <<std::endl;
 
 }
 

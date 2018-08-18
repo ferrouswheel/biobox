@@ -3,7 +3,7 @@ MYCODEDIR := .
 # Directories to search for header files
 SEARCHDIRS := -I${MYCODEDIR}
 
-DEPENDFLAGS := -g -Wall -Werror ${SEARCHDIRS}
+DEPENDFLAGS := -g -Wall -Wno-deprecated ${SEARCHDIRS}
 
 # C preprocessor (C, C++, FORTRAN)
 CPPFLAGS = 
@@ -35,7 +35,7 @@ CXXFLAGS  = ${DEPENDFLAGS}
 
 LINKER    := g++
 LDFLAGS    = 
-LOADLIBES := -lm -lGL -lglut -lGLU
+LOADLIBES := -lm -framework OpenGL -framework GLUT
 
 # bb
 
@@ -80,21 +80,21 @@ checksyntax:
 
 # DO NOT DELETE THIS LINE -- makemake depends on it.
 
-./biobox.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h /usr/include/GL/gl.h /usr/include/GL/glu.h /usr/include/GL/glut.h /usr/include/math.h /usr/include/stdlib.h
+./biobox.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h 
 
-./force.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h /usr/include/GL/gl.h /usr/include/GL/glu.h /usr/include/GL/glut.h /usr/include/math.h /usr/include/stdlib.h
+./force.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h 
 
-./glutMaster.o: ./glutMaster.h ./glutWindow.h /usr/include/GL/glut.h
+./glutMaster.o: ./glutMaster.h ./glutWindow.h 
 
 ./glutWindow.o: ./glutWindow.h
 
-./main.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h /usr/include/GL/gl.h /usr/include/GL/glu.h /usr/include/GL/glut.h /usr/include/math.h /usr/include/stdlib.h
+./main.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h 
 
-./model.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h /usr/include/GL/gl.h /usr/include/GL/glu.h /usr/include/GL/glut.h /usr/include/math.h /usr/include/stdlib.h
+./model.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h 
 
 ./muscle.o: ./force.h ./muscle.h ./point.h ./vector.h /usr/include/math.h
 
-./organism.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h /usr/include/GL/gl.h /usr/include/GL/glu.h /usr/include/GL/glut.h /usr/include/math.h /usr/include/stdlib.h
+./organism.o: ./biobox.h ./force.h ./glutMaster.h ./glutWindow.h ./model.h ./muscle.h ./organism.h ./point.h ./vector.h 
 
 ./point.o: ./force.h ./muscle.h ./point.h ./vector.h /usr/include/math.h
 

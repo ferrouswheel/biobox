@@ -13,7 +13,8 @@
 #ifndef __GLUT_MASTER_H__
 #define __GLUT_MASTER_H__
 
-#include <GL/glut.h>
+#include <stdlib.h>
+#include <GLUT/glut.h>
 #include "glutWindow.h"
 
 #define MAX_NUMBER_OF_WINDOWS 256 
